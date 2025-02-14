@@ -47,8 +47,6 @@ class CheckoutController extends Controller
                         'price' => $item->product->price,
                         'quantity' => $item->quantity
                     ]);
-                    // name email address omer
-                    // name email address mustafa
                     foreach ($request->post('address') as $type => $address) {
                         $address['type'] = $type;
                         $order->addresses()->create($address);
